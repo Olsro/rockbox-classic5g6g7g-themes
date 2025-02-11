@@ -1,3 +1,22 @@
+# digitalReduxDetox
+Modified/Derived from digitalRedux theme by D Juarez. The base theme supports CJK characters out of the box, so I didn't need to work on this aspect for this one.
+
+Changelog:
+- Time to detox from excess of informations in the WPS. These non-necessary infos have been removed:
+	- Battery percentage (but is still available anywhere else)
+	- The big "Now playing" label has been removed
+	- The format name, the frequency, and the codec name have been removed
+	- The disk accesses animated icon has been removed (but is still available anywhere else)
+- Detox yourself from excessive texts in the WPS: the cover art is now bigger than ever, increasing your immersion and focus into the music that you are currently listening to !
+- Fixed alignment of status bar icons into each others, so it look better overall
+- Fixed vertical alignments from Title/Artist/Album in the WPS
+- The clock is the status bar is now a proper white label, which makes it way easier to read the clock when the backlight is off rather than the orange text on black blackground.
+- When changing the volume in the WPS, you can now see the precise decibel numerical value the time being.
+
+![Alt text](digitalReduxDetox/screenshots/wps1.png?raw=true "WPS1")
+![Alt text](digitalReduxDetox/screenshots/wps2.png?raw=true "WPS2")
+![Alt text](digitalReduxDetox/screenshots/menu.png?raw=true "MENU")
+
 # retroTapeFixed
 Modified/Derived from retroTape theme for iPod Video (CC-BY-SA 3.0) by Humberto Santana.
 

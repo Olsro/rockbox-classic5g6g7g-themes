@@ -1,0 +1,155 @@
+#######################################
+## THEME NAME: digitalRedux
+## BY D Juarez  2024
+## Hi everyone! I really like the digital theme but I'm also a sucker for large
+## album art so I decided to edit the digital theme. I want to say ~70% of the
+## code is original and the rest I added to implement additional things (such as
+## the playlist position) and a typeface that supports Japanese. Hope y'all like
+## it. This theme is intended to be simple so it will load fast. If you want to
+## contact me make a post on the rockbox subreddit and I'll get in contact with
+## you. Happy music listening! :)))))
+## Disc working icon was taken from the xhibition theme and the icons were taken
+## from adawaita. If y'all would rather me use different icons, then first of all
+## apologies and secondly no problem my bad. I'll change it as soon as I can and
+## upload it.
+#######################################
+## THEME NAME: DIGITAL
+## BY: TBX1024 (AT) GMAIL (DOT) COM
+## PLATFORM: IPOD CLASSIC (IPOD 6G/6.5G/7G) (320*240)
+## VERSION: 1.0
+## Sat Mar 15 10:54:44 CET 2014
+## License: Creative Commons Attribution-Share Alike 3.0
+## (http://creativecommons.org/licenses/by-sa/3.0/)
+########################################
+## ORIGINAL THEME:
+## THEME NAME: MINIMAL RETRO
+## BY: SDENT64 (AT) HOTMAIL (DOT) COM
+## PLATFORM: SANSA FUZE V2 (220x176x16)
+## VERSION: 0.1
+#######################################
+# Improved by OlsroFR (2025)
+#### WPS FILE ########################
+
+## Fonts Used
+%Fl(3,19-MPLUSRounded1c-Medium.fnt)
+%Fl(4,Digital-7Mono-28.fnt)
+%Fl(5,20-Roboto-Bold.fnt)
+%Fl(6,20-MPLUSRounded1c-Bold.fnt)
+%Fl(7,13-Fixed.fnt)
+%Fl(8,18-MPLUSRounded1c-Medium.fnt)
+
+############ Status Bar ##############
+## Disable Status Bar
+%wd
+
+Status Bar Background
+%V(0,0,-,16,-)%Vb(-)
+
+## Playback Mode
+%xl(B,status_mode.bmp,0,0,4)
+%V(223,3,14,12,0)%Vb(-)%Vf(-)
+%al%?mp<|%xd(Ba)|%xd(Bb)|%xd(Bc)|%xd(Bd)>
+
+## Battery Icon
+%xl(H,battery_level.bmp,0,0,12)
+%V(248,3,37,14,0)%Vb(-)%Vf(-)
+%?bp<%?bc<%xd(Hl)|%xd(Hl)>|%?bl<|%xd(Ha)|%xd(Hb)|%xd(Hc)|%xd(Hd)|%xd(He)|%xd(Hf)|%xd(Hg)|%xd(Hh)|%xd(Hi)|%xd(Hj)|%xd(Hk)>>
+
+## Clock
+%V(273,0,47,16,8)%Vf(000000)%Vb(C7D8D9)
+%ac%?cf<%cH:%cM|%cl:%cM>
+
+############### Main View #################
+
+# Album Art/Info Viewport Conditional
+%?C<%Vd(a)|%Vd(b)>
+
+## Main Panel
+%Vi(-,0,16,-,195,8)%Vf(-)%Vb(-)
+%?mp<|%Vd(e)|%Vd(f)|||%Vd(g)|%Vd(h)|%Vd(i)|%Vd(j)>%Vf(-)
+
+### If Album Art Present --------------------
+
+## Album Cover
+%Vl(a,0,0,220,220,-)
+%Cl(0,0,220,220,c,c)
+%Cd
+
+## Track Name
+%Vl(a,226,22,-,25,6)%Vf(C7D8D9)%Vb(-)
+%s%it
+## Artists Name
+%Vl(a,226,47,-,25,3)%Vf(C7D8D9)%Vb(-)
+%s%ia
+## Album Name
+%Vl(a,226,72,-,25,3)%Vf(C7D8D9)%Vb(-)
+%s%id
+## Timer
+%Vl(a,226,136,-,30,4)%Vf(-)%Vb(-)
+%al%pc
+## Peak Meter
+%Vl(a,226,166,85,30,3)%Vf(-)%Vb(-)
+%pm
+## Track Progress Bar And Volume Bar
+%Vl(a,5,216,310,11,-)%Vf(-)%Vb(-)
+%?mv<%pv(0,0,-,10)|%pb(0,0,-,10)>
+
+### If Album Art Not Present --------------------
+
+## Track Name
+%Vl(b,0,45,-,25,6)%Vf(C7D8D9)%Vb(-)
+%s%ac%it
+## Artists Name
+%Vl(b,0,70,-,25,3)%Vf(C7D8D9)%Vb(-)
+%s%ac%ia
+## Album Name
+%Vl(b,0,95,-,25,3)%Vf(C7D8D9)%Vb(-)
+%s%ac%id
+## Timer
+%Vl(b,10,130,90,30,4)%Vf(-)%Vb(-)
+%al%pc
+## Peak Meter
+%Vl(b,10,160,300,30,3)%Vf(-)%Vb(-)
+%pm
+## Track Progress Bar And Volume Bar
+%Vl(b,5,211,310,16,-)%Vf(-)%Vb(-)
+%?mv<%pv(0,0,-,15)|%pb(0,0,-,15)>
+
+##################### Bottom View #####################
+
+## Bottom Bar
+%V(0,213,-,-,-)%Vb(-)%Vf(-)
+
+## Time Tags And Volume Tag
+%V(3,226,40,14,7)%Vb(-)%Vf(-)
+%?mv<VOLUME|0:00>
+%V(267,226,50,14,7)%Vb(-)%Vf(-)
+%ar%?mv<|%pt>
+
+## Playlist Position
+%V(60,226,-60,14,7)%Vb(-)%Vf(-)
+%ac%?mv<%pv dB|%pp %Sx(of) %pe>
+
+### If Album Art Present --------------------
+# Shuffle
+%xl(D,shuffle_mode_blue.bmp,0,0,2)
+%Vl(a,226,108,20,20,0)%Vb(-)%Vf(-)
+%?ps<%xd(Da)|%xd(Db)>
+# Repeat
+%xl(E,repeat_mode_blue.bmp,0,0,4)
+%Vl(a,257,108,20,20,0)%Vb(-)%Vf(-)
+%?mm<|%xd(Ea)|%xd(Eb)|%xd(Ec)|%xd(Ed)>
+## EQ
+%Vl(a,293,108,20,20,5)%Vb(-)%Vf(-)
+%?St(eq enabled)<EQ|>
+
+### If Album Art Not Present --------------------
+## Shuffle
+%Vl(b,225,134,20,20,0)%Vb(-)%Vf(-)
+%?ps<%xd(Da)|%xd(Db)>
+## Repeat
+%Vl(b,255,134,20,20,0)%Vb(-)%Vf(-)
+%?mm<|%xd(Ea)|%xd(Eb)|%xd(Ec)|%xd(Ed)>
+## EQ
+%Vl(b,285,134,20,20,5)%Vb(-)%Vf(-)
+%?St(eq enabled)<EQ|>

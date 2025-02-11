@@ -1,0 +1,79 @@
+#######################################
+## THEME NAME: digitalRedux
+## BY D Juarez  2024
+## Hi everyone! I really like the digital theme but I'm also a sucker for large
+## album art so I decided to edit the digital theme. I want to say ~70% of the
+## code is original and the rest I added to implement additional things (such as
+## the playlist position) and a typeface that supports Japanese. Hope y'all like
+## it. This theme is intended to be simple so it will load fast. If you want to
+## contact me make a post on the rockbox subreddit and I'll get in contact with
+## you. Happy music listening! :)))))
+## Disc working icon was taken from the xhibition theme and the icons were taken
+## from adawaita. If y'all would rather me use different icons, then first of all
+## apologies and secondly no problem my bad. I'll change it as soon as I can and
+## upload it.
+#######################################
+## ORIGINAL THEME NAME: DIGITAL
+## BY: TBX1024 (AT) GMAIL (DOT) COM
+## PLATFORM: IPOD CLASSIC (IPOD 6G/6.5G/7G) (320*240)
+## VERSION: 1.0
+## Sat Mar 15 10:54:44 CET 2014
+## License: Creative Commons Attribution-Share Alike 3.0
+## (http://creativecommons.org/licenses/by-sa/3.0/)
+########################################
+## ORIGINAL THEME:
+## THEME NAME: MINIMAL RETRO
+## BY: SDENT64 (AT) HOTMAIL (DOT) COM
+## PLATFORM: SANSA FUZE V2 (220x176x16)
+## VERSION: 0.1
+#######################################
+# Improved by OlsroFR (2025)
+#### SBS FILE ########################
+
+############ Status Bar ##############
+## Disable Status Bar
+%wd
+
+%xl(F,disk.bmp,0,0,6)
+%xl(L,loading.bmp,0,0,16)
+
+#-- Title Bar Disabler
+#%?Lt<|>
+
+#Status Bar Background
+%V(0,0,-,16,-)%Vb(-)
+
+%Fl(3,19-MPLUSRounded1c-Medium.fnt)
+%Fl(4,20-MPLUSRounded1c-Medium.fnt)
+%Fl(5,17-MPLUSRounded1c-Medium.fnt)
+%Fl(6,18-MPLUSRounded1c-Medium.fnt)
+
+## Playback Mode
+%xl(B,status_mode.bmp,0,0,4)
+%V(5,3,14,12,0)%Vb(-)%Vf(-)
+%al%?mp<|%xd(Ba)|%xd(Bb)|%xd(Bc)|%xd(Bd)>
+
+## Menu Info
+%V(25,0,160,17,6)%Vb(C7D8D9)%Vf(000000)
+ %s%Lt
+
+#-- Disk working
+%V(190,4,11,11,-)
+%?lh<%t(0.1)%xd(La);%t(0.1)%xd(Lb);%t(0.1)%xd(Lc);%t(0.1)%xd(Ld);%t(0.1)%xd(Le);%t(0.1)%xd(Lf);%t(0.1)%xd(Lg);%t(0.1)%xd(Lh);%t(0.1)%xd(Li);%t(0.1)%xd(Lj);%t(0.1)%xd(Lk);%t(0.1)%xd(Ll);%t(0.1)%xd(Lm);%t(0.1)%xd(Ln);%t(0.1)%xd(Lo);%t(0.1)%xd(Lp)|>
+
+## Battery Text
+%V(204,1,40,20,6)%Vb(-)%Vf(-)
+%ar%bl%%
+
+## Battery Icon
+%xl(H,battery_level.bmp,0,0,12)
+%V(248,3,37,14,0)%Vb(-)%Vf(-)
+%?bp<%?bc<%xd(Hl)|%xd(Hl)>|%?bl<|%xd(Ha)|%xd(Hb)|%xd(Hc)|%xd(Hd)|%xd(He)|%xd(Hf)|%xd(Hg)|%xd(Hh)|%xd(Hi)|%xd(Hj)|%xd(Hk)>>
+
+## Clock
+%V(273,0,47,16,6)%Vf(000000)%Vb(C7D8D9)
+%ac%?cf<%cH:%cM|%cl:%cM>
+
+## Main Panel
+%Vi(-,0,22,-,-,4)%Vf(C7D8D9)%Vb(-)
+%?mp<|%Vd(e)|%Vd(f)|||%Vd(g)|%Vd(h)|%Vd(i)|%Vd(j)>
