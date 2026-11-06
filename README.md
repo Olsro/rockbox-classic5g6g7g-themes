@@ -43,3 +43,9 @@ Changelog :
 
 ![Alt text](ipodmod3blkFixed/screenshots/wps.png?raw=true "WPS")
 ![Alt text](ipodmod3blkFixed/screenshots/menu.png?raw=true "MENU")
+
+# iVideoPomme
+Modified/Derived from iVideo Theme theme by Humberto Santana with better fonts (and CJK compatible) + slight changes.
+
+![Alt text](iVideoPomme/screenshots/1.png?raw=true "Home")
+![Alt text](iVideoPomme/screenshots/2.png?raw=true "WPS1")

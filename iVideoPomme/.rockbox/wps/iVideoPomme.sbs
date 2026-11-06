@@ -1,0 +1,48 @@
+# Theme: iVideoPomme
+# By: Humberto Santana (humbertosantana@hotmail.com)
+# Adapted and renamed by: Olsro
+# License: Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)
+# Derived from iLike Theme for 320x240 by Alan Brito, which was ported from the 176x132 version by H. Pearce
+# If used for other works, as per this license, please include the following Attribution Text: "Modified/Derived from iVideo theme for iPod Video (CC-BY-SA 3.0) by Humberto Santana"
+# Sorry for the mess in the code, the base theme wasn't commented and I was too lazy to do it.
+#
+# Version 1.0 (Olsro edition, first release)
+# Last Update: September 20th, 2026
+# Original first version: February 8th, 2011
+#
+# SBS File
+#
+%T(0,0,50,24,select)
+%T(0,0,50,24,&cancel)
+%T(60,0,200,24,menu)
+%T(60,0,200,24,&cancel)
+%wd
+%Fl(2,19-PodiumCJK18-a4.fnt)
+%Fl(3,10-Pixo7B.fnt)
+%xl(A,Battery Icon.bmp,0,0,25)
+%xl(B,Disk Access.bmp,0,0,6)
+%xl(C,Hold Icon.bmp,0,0)
+%xl(D,Playmode Icon.bmp,0,0,4)
+# Screens 2-5 have dedicated titles; menus and browsers use Rockbox's list title.
+# The final conditional branch also handles screen IDs above 6 (files are 7).
+%?St(battery display)<%?cs<%Vd(t)|%Vd(n)|%Vd(n)|%Vd(n)|%Vd(n)|%Vd(t)>|%?cs<%Vd(tbat)|%Vd(nbat)|%Vd(nbat)|%Vd(nbat)|%Vd(nbat)|%Vd(tbat)>%Vd(battery)>
+%Vl(n,53,4,214,19,2)%Vf(000000)%Vb(FFFFFF)
+%s%ac%?cs<||%?Rp<%Sx(Recording)>|%?tp<%Sx(FM Radio)>|%?if(%cs, =, 5)<%Sx(Playlist)>>
+%Vl(t,53,4,214,19,2)%Vf(000000)%Vb(FFFFFF)
+%s%ac%?Lt<%Lt|%?if(%cs, =, 7)<%Sx(Files)|iPod>>
+%Vl(nbat,60,4,200,19,2)%Vf(000000)%Vb(FFFFFF)
+%s%ac%?cs<||%?Rp<%Sx(Recording)>|%?tp<%Sx(FM Radio)>|%?if(%cs, =, 5)<%Sx(Playlist)>>
+%Vl(tbat,60,4,200,19,2)%Vf(000000)%Vb(FFFFFF)
+%s%ac%?Lt<%Lt|%?if(%cs, =, 7)<%Sx(Files)|iPod>>
+%?lh<%Vd(a)|%Vd(b)>
+%Vl(battery,260,6,26,12,3)%Vf(000000)%Vb(FFFFFF)
+%ac%bl%%
+%Vl(b,36,5,10,13,-)%Vf(000000)%Vb(FFFFFF)
+%?mh<%xd(C)|%?mr<%xd(C)>>
+%Vi(-,0,24,320,216,1)%Vf(000000)%Vb(FFFFFF)
+%Vl(a,36,4,16,16,-)%Vf(000000)%Vb(FFFFFF)
+%t(0.1)%xd(Ba);%t(0.1)%xd(Bb);%t(0.1)%xd(Bc);%t(0.1)%xd(Bd);%t(0.1)%xd(Be);%t(0.1)%xd(Bf)
+%V(286,6,25,12,-)%Vf(000000)%Vb(FFFFFF)
+%?bp<%?bc<%t(1.0)%xd(Aa);%t(1.0)%xd(Ab)|%xd(Ac)>|%?bl<%xd(Ad)|%xd(Ad)|%xd(Ae)|%xd(Af)|%xd(Ag)|%xd(Ah)|%xd(Ai)|%xd(Aj)|%xd(Ak)|%xd(Al)|%xd(Am)|%xd(An)|%xd(Ao)|%xd(Ap)|%xd(Aq)|%xd(Ar)|%xd(As)|%xd(At)|%xd(Au)|%xd(Av)|%xd(Aw)|%xd(Ax)|%xd(Ay)>>
+%V(11,4,18,15,-)%Vf(000000)%Vb(FFFFFF)
+%?mp<|%xd(Da)|%xd(Db)|%xd(Dc)|%xd(Dd)|%?Rp<%xd(Da)>|%?Rp<%xd(Db)>|%?tp<%xd(Da)>|%?tp<%xd(Db)>>

@@ -1,0 +1,84 @@
+# TO BLOCK CLOCK DISPLAYING, RENAME FILE TO iVideoPomme.fms AND REPLACE THE CORRESPONDENT FILE
+# Theme: iVideoPomme
+# By: Humberto Santana (humbertosantana@hotmail.com)
+# Adapted and renamed by: Olsro
+# License: Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)
+# Derived from iLike Theme for 320x240 by Alan Brito, which was ported from the 176x132 version by H. Pearce
+# If used for other works, as per this license, please include the following Attribution Text: "Modified/Derived from iVideo theme for iPod Video (CC-BY-SA 3.0) by Humberto Santana"
+# Sorry for the mess in the code, the base theme wasn't commented and I was too lazy to do it.
+#
+# Version 1.0 (Olsro edition, first release)
+# Last Update: September 20th, 2026
+# Original first version: February 8th, 2011
+#
+# FMS File
+#
+%T(60,0,200,24,menu)
+%T(60,0,200,24,&cancel)
+%T(0,208,70,32,prev)
+%T(0,208,70,32,&rwd)
+%T(15,34,96,14,presets)
+%T(250,208,70,32,next)
+%T(250,208,70,32,&ffwd)
+%T(0,0,50,24,play)
+%T(0,0,50,24,&stop)
+%T(20,182,280,15,progressbar)
+%wd
+%X(Backdrop.bmp)
+%Fl(2,19-PodiumCJK18-a4.fnt)
+%Fl(3,10-Pixo7B.fnt)
+%xl(A,AA Bottom.bmp,11,157)
+%xl(B,AA Left.bmp,11,61)
+%xl(C,AA Right.bmp,111,61)
+%xl(D,Battery Icon.bmp,0,0,25)
+%xl(E,Disk Access.bmp,0,0,6)
+%xl(F,Hold Icon.bmp,0,0)
+%xl(G,Playmode Icon.bmp,0,0,4)
+%xl(H,Stereo Icon.bmp,0,0)
+%xl(I,Volume Left.bmp,12,180)
+%xl(J,Volume Right.bmp,283,180)
+%xl(K,Volumebar Shadow Left.bmp,29,197)
+%xl(L,Volumebar Shadow Right.bmp,278,197)
+%xl(M,Radio Icon.bmp,0,0)
+%?lh<%Vd(a)|%Vd(b)>
+%xd(A)%xd(B)%xd(C)
+%?mv(2.0)<%Vd(g)%xd(I)%xd(J)%xd(K)%xd(L)%?St(volume display)<|%Vd(volume)>|%Vd(e)%Vd(f)>
+%V(286,6,25,12,-)%Vf(000000)%Vb(FFFFFF)
+%?bp<%?bc<%t(1.0)%xd(Da);%t(1.0)%xd(Db)|%xd(Dc)>|%?bl<%xd(Dd)|%xd(Dd)|%xd(De)|%xd(Df)|%xd(Dg)|%xd(Dh)|%xd(Di)|%xd(Dj)|%xd(Dk)|%xd(Dl)|%xd(Dm)|%xd(Dn)|%xd(Do)|%xd(Dp)|%xd(Dq)|%xd(Dr)|%xd(Ds)|%xd(Dt)|%xd(Du)|%xd(Dv)|%xd(Dw)|%xd(Dx)|%xd(Dy)>>
+%Vl(a,36,4,16,16,-)%Vf(000000)%Vb(FFFFFF)
+%t(0.1)%xd(Ea);%t(0.1)%xd(Eb);%t(0.1)%xd(Ec);%t(0.1)%xd(Ed);%t(0.1)%xd(Ee);%t(0.1)%xd(Ef)
+%Vl(b,36,5,10,13,-)%Vf(000000)%Vb(FFFFFF)
+%?mh<%xd(F)|%?mr<%xd(F)>>
+%V(11,4,18,15,-)%Vf(000000)%Vb(FFFFFF)
+%?mp<|||||||%xd(Ga)|%xd(Gb)>
+%ax%V(15,32,160,19,2)%Vf(000000)%Vb(FFFFFF)
+%s%al%?tm<%Sx(Scan)|%?Sr<%Tc %Sx(of) %Ti %Sx(Preset)|%Sx(Preset) %Ti %Sx(of) %Tc>>
+%ax%V(15,61,96,96,-)%Vf(000000)%Vb(FFFFFF)
+%Cl(0,0,96,96,c,c)
+%?C<%Cd|%xd(M)>
+%ax%V(120,70,190,19,2)%Vf(000000)%Vb(FFFFFF)
+%al%tf Mhz
+%Vl(g,29,182,254,15,-)%Vf(000000)%Vb(FFFFFF)
+%pv(0,0,254,15,Volumebar.bmp)
+%ax%V(120,100,190,19,2)%Vf(000000)%Vb(FFFFFF)
+%s%al%?Tn<%Tn|%?ty<%ty|%?tt<Tuned|tune>>>
+%ax%V(120,130,190,19,2)%Vf(000000)%Vb(FFFFFF)
+%s%al%?tz<%tz|%Sx(Signal strength:) %?tr<%?tr<Faint/No Signal|%Sx(Weak)|Fair|%Sx(Strong)|Very Strong>>>
+%?St(battery display)<%Vd(title)|%Vd(titlebat)>
+%Vl(title,53,4,214,19,2)%Vf(000000)%Vb(FFFFFF)
+%s%ac%Sx(FM Radio)
+%Vl(titlebat,60,4,200,19,2)%Vf(000000)%Vb(FFFFFF)
+%s%ac%Sx(FM Radio)
+#%Vl(clock,60,4,200,19,2)%Vf(000000)%Vb(FFFFFF)
+#%t(10)%s%ac%Sx(FM Radio);%t(30)%s%ac%?cf<%cH:%cM|%cl:%cM %cP>
+%ax%V(282,34,17,14,-)%Vf(000000)%Vb(FFFFFF)
+%?ts<%xd(H)|>
+%Vl(volume,20,206,280,19,2)%Vf(000000)%Vb(FFFFFF)
+%ac%pv dB
+%Vl(e,20,182,280,15,-)%Vf(000000)%Vb(FFFFFF)
+%pb(0,0,280,15,Progress Bar.bmp)
+%Vl(f,20,206,280,19,2)%Vf(000000)%Vb(FFFFFF)
+%al%ta%ar%tb
+%?St(battery display)<|%Vd(battery)>
+%Vl(battery,260,6,26,12,3)%Vf(000000)%Vb(FFFFFF)
+%ac%bl%%
